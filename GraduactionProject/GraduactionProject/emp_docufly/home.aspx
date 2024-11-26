@@ -117,6 +117,8 @@
         </div>
 
 
+
+
         <footer>
             <p>جميع الحقوق محفوظة لجامعة المنيا <i class="fa-regular fa-copyright"></i> 2025</p>
         </footer>
