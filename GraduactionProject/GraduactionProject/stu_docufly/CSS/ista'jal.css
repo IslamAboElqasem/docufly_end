@@ -1,0 +1,223 @@
+:root {
+    --main-bg-color: #f0f0f0;
+    --header-bg-color: #fff;
+    --primary-color: #056170;
+    --hover-color: #e9c605;
+    --border-color: #00274d;
+    --button-bg-color: #056170;
+    --button-text-color: #fff;
+    --footer-bg-color: #056170;
+    --card-bg-color: #fff;
+    --box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Noto Sans Arabic', sans-serif; 
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--header-bg-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 999;
+    box-shadow: var(--box-shadow-medium);
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;  
+}
+
+nav li {
+    margin: 0 15px;
+}
+.d-none.d-md-block {
+    margin-left: 20px; 
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+nav li a:hover {
+    color: var(--hover-color);
+}
+
+.logout-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>');
+}
+
+.collapse ul {
+    list-style: none;
+}
+
+.collapse ul li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.collapse ul li a:hover {
+    color: var(--hover-color);
+}
+.collapse ul li a .badge {
+    position: absolute;
+    padding: 3px 7px;
+    font-size: 11px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.notification {
+    position: relative;
+    margin-left: 1.5vw;
+}
+.notification i {
+    font-size: 1.7vw;
+    color: var(--primary-color);
+}
+.notification .badge {
+    position: absolute;
+    right: -8px;
+    top: -4px;
+    padding: 3px 7px;
+    font-size: 10px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+main {
+    padding: 100px 40px 40px;
+    text-align: right;
+}
+
+.body {
+    width: 40vw;
+}
+
+.forms {
+    margin-top: 20px;
+}
+
+.form-control {
+    direction: rtl;
+    text-align: right;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-large {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: var(--button-large-padding);
+    font-size: 1.3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 1.2rem;
+    width: 10rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-large:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-small {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border: var(--primary-color) 2px solid;
+    padding: var(--button-small-padding);
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 1.2rem;
+    width: 20rem;
+    height: 7rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-small:hover {
+    border: var(--primary-color) 2px solid;
+    box-shadow: 0 5px 10px #5e4f0690;
+    background-color: #ffffff; 
+}
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    color: var(--primary-color);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.modal-footer .btn {
+    background-color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    font-weight: bold;
+    color: #fff;
+    box-shadow: none;
+    border-radius: 18px;
+}
+
+.modal-footer .btn:hover {
+    background-color: #ffda0a; 
+    border-color: #ffda0a;
+    color: #fff;
+}  
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}

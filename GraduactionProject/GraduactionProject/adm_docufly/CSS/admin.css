@@ -1,0 +1,380 @@
+:root {
+    --main-bg-color: #f0f0f0;
+    --header-bg-color: #fff;
+    --primary-color: #056170;
+    --hover-color: #e9c605;
+    --border-color: #00274d;
+    --button-bg-color: #056170;
+    --button-text-color: #fff;
+    --footer-bg-color: #056170;
+    --card-bg-color: #fff;
+    --box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Noto Sans Arabic', sans-serif; 
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--header-bg-color);
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 999;
+    box-shadow: var(--box-shadow-medium);
+}
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.logo2 img {
+    width: 80px;
+    height: auto;
+}
+.container-fluid{
+    padding-top: 50px;
+}
+ .sidebar {
+    height: 150vh;
+    background-color: #056170;
+    padding-top: 50px;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+.sidebar a:hover{
+    background-color: #fff;
+    color: #056170;
+    border: #056170;
+    border-radius: 5px;
+}
+
+.dropdown-item {
+    color: #056170; /* لون النص */
+}
+
+.dropdown-item:hover {
+    background-color: #e0f2f1; /* لون الخلفية عند التمرير */
+}
+h3{
+    font-size: 1.8vw; /* زيادة حجم الخط */
+    color: var(--primary-color);
+    font-weight: 600; 
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); /* تحسين الظل */
+    transition: color 0.3s ease; /* إضافة تأثير انتقال */
+}
+.line{
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #e9c605;
+    margin: 10px 590px;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+/* Search  */
+.search-inputs {
+    background-color: #f8f9fa;
+    padding: 20px; /* تقليل الحشوة قليلاً */
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-medium);
+    display: flex;
+    flex-wrap: nowrap; /* استخدام nowrap لجعل العناصر في صف واحد */
+    gap: 10px; /* مسافة بين العناصر */
+    align-items: center; /* محاذاة العناصر عموديًا */
+}
+.custom-select {
+    flex: 1; /* يسمح بالعناصر بالتوزيع بشكل متساوي */
+    min-width: 200px; /* عرض أدنى لكل حقل */
+}
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(5, 97, 112, 0.5);
+}
+.search-text-center {
+    display: flex; /* استخدام Flexbox */
+    justify-content: center; /* توسيط الزر أفقياً */
+    margin-top: 10px; /* إضافة مسافة بين المدخلات والزر */
+}
+.btn-search {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 12px 24px; /* زيادة الحشوة */
+    font-size: 16px;
+    border-radius: 8px; /* جعل الزوايا أكثر انسيابية */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* إضافة تأثير الظل */
+    height: 100%;
+    cursor: pointer; /* إضافة مؤشر اليد */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+}
+
+.btn-search:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px); /* رفع الزر قليلاً عند التحويم */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* زيادة الظل عند التحويم */
+}
+
+.btn-search:focus {
+    outline: none; /* إزالة الحدود الافتراضية */
+}
+
+.input-group-text {
+    cursor: pointer;
+}
+
+
+@media print {
+    header, footer, .btn {
+        display: none; /* إخفاء الهيدر والفوتر وزر الطباعة */
+    }
+    .print-container {
+        display: flex; /* استخدام flex لعرض المحتوى بجانب بعضه */
+        flex-direction: row; /* ترتيب العناصر في صف */
+        justify-content: space-between; /* توزيع العناصر بالتساوي */
+        align-items: flex-start; /* محاذاة العناصر لأعلى */
+        width: 100%; /* تأكد من أن المحتوى يملأ الصفحة */
+    }
+    .card {
+        flex: 1; /* جعل الكارد يتوسع ليملأ المساحة المتاحة */
+        /* margin: 0 5px; إضافة هامش بين الكروت */
+        page-break-inside: avoid; /* تجنب انكسار الصفحة داخل الكارد */
+        font-size: 0.9em;
+    }
+    .img-fluid {
+        width: 50px; /* تعديل عرض الصورة */
+        height: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+    }
+}
+
+
+/*  Pagination  */
+
+/* تنسيق قائمة الصفحات */
+.pagination {
+    list-style: none; /* إزالة النقاط من القائمة */
+    padding: 0; /* إزالة التباعد */
+    display: flex; /* استخدام Flexbox لتوزيع العناصر */
+    gap: 5px; /* المسافة بين العناصر */
+}
+/* تنسيق عناصر الصفحة */
+.pagination .page-item {
+    margin: 0; /* إزالة التباعد */
+}
+/* تنسيق الروابط */
+.pagination .page-link {
+    display: block; /* جعل الرابط كتلة */
+    padding: 10px 15px; /* تباعد داخلي */
+    color: #056170; /* لون النص */
+    text-decoration: none; /* إزالة التسطير */
+    border: 1px solid #056170; /* لون الحدود */
+    border-radius: 5px; /* زوايا مدورة */
+    transition: background-color 0.3s, color 0.3s; /* تأثير انتقال */
+}
+
+/* تأثير عند مرور الفأرة على الرابط */
+.pagination .page-link:hover {
+    background-color: #056170; /* تغيير لون الخلفية عند المرور */
+    color: white; /* تغيير لون النص عند المرور */
+}
+
+/* تنسيق الرقم النشط */
+.pagination .active-page {
+    background-color: #056170; /* لون الخلفية للصفحة النشطة */
+    color: white; /* لون النص للصفحة النشطة */
+    border: 1px solid #056170; /* لون الحدود */
+}
+
+/* Table */
+.requests {
+    background-color: var(--card-bg-color);
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-light);
+    overflow: hidden;
+    margin-bottom: 200px;
+}
+
+.container {
+    height: 100%; /* تعيين ارتفاع الحاوية بالكامل */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.table-container {
+    flex: 1; /* ملء المساحة المتاحة */
+    overflow-y: auto; /* تمكين التمرير العمودي */
+}
+
+/* النمط الخاص بالنافذة المنبثقة */
+.popup-modal {
+    display: none;
+    position: fixed;
+    z-index: 1050;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* خلفية شفافة أكثر تركيزًا */
+}
+
+.popup-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px; /* زيادة العرض للنافذة */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.popup-modal-content h4 {
+    color: var(--hover-color);
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 35px;
+    color: var(--footer-bg-color);
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.form-check-label {
+    font-size: 16px;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: var(--hover-color); /* لون الزر الأساسي */
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--hover-color), 10%);
+}
+
+.modal-footer button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.table i {
+    font-size: 1.5vw;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: color 0.3s;
+}
+
+.table .fa-eye:hover {
+    color: var(--hover-color);
+}
+
+.table .fa-trash:hover {
+    color: #ff0000;
+}
+
+.modal{
+    color: #056170;
+}
+.modal-header .close {
+    background: none; /* إزالة الخلفية */
+    border: none; /* إزالة الحدود */
+    font-size: 1.5rem; /* حجم الأيقونة */
+    color: #056170; /* لون الأيقونة */
+}
+
+/* تكبير منطقة الضغط على زر الإغلاق */
+.modal-header .close span {
+    font-size: 2rem;
+}
+.modal-body i{
+    font-size: 40px;
+    color:green;
+}
+.modal-body button .btn-del{
+    background-color: green;
+}
+.modal-footer{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.modal-footer .btn {
+    background-color: #056170;
+    border: 2px solid #056170;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: none;
+    border-radius: 18px;
+}
+.modal-footer .btn:hover {
+    background-color: #e9c605; 
+    border-color: #e9c605;
+    color: #fff;
+} 
+.modal-footer .btn1:hover {
+    background-color: rgb(1, 156, 1); 
+    border-color: rgb(1, 156, 1);
+    color: #fff;
+}  
+.modal-footer .btn2:hover {
+    background-color: red; 
+    border-color: red;
+    color: #fff;
+} 
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+
+footer {
+    background-color: var(--footer-bg-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}

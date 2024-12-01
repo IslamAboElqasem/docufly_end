@@ -1,0 +1,64 @@
+:root {
+    --main-bg-color: #f0f0f0;
+    --header-bg-color: #fff;
+    --primary-color: #056170;
+    --hover-color: #e9c605;
+    --border-color: #00274d;
+    --button-bg-color: #056170;
+    --button-text-color: #fff;
+    --footer-bg-color: #056170;
+    --card-bg-color: #fff;
+    --box-shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Noto Sans Arabic', sans-serif; 
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+    
+}
+.wrapper {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    min-height: 100vh; /* اجعل الحد الأدنى لارتفاع الحاوية 100% من ارتفاع الصفحة */
+}
+
+.cards {
+    min-height: 85vh;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    box-shadow: var(--box-shadow-medium);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير الانتقال على التحويل والظل */
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* تأثير التكبير عند التمرير */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* تأثير الظل عند التمرير */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card:hover .card-title {
+    color: var(--hover-color); /* تغيير لون النص عند التمرير */
+}
+
+.img {
+    padding: 20px;
+}
+
+
